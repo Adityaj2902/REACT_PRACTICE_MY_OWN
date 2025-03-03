@@ -2,7 +2,9 @@ import './App.css';
 import Greet from  './component/GreetByFunctionComponent'
 import Welcome from './component/GreetByClassComponent'
 import Message from './component/Message';
-
+import Counter from './component/Counter';
+import ClickCounter from './component/ClickCounter';
+import HoverCounter from './component/HoverCounter';
 function App() {
   return (
     <div className="App">
@@ -25,6 +27,12 @@ function App() {
       </Welcome>
 
       <Message/>
+      <Counter/>
+
+    <ClickCounter/>
+    <HoverCounter/>
+
+
     </div>
   );
 }
