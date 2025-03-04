@@ -5,6 +5,8 @@ import Message from './component/Message';
 import Counter from './component/Counter';
 import ClickCounter from './component/ClickCounter';
 import HoverCounter from './component/HoverCounter';
+import UserefCounter from './component/UserefCounter';
+import ClassCounter from './component/ClassCouter';
 function App() {
   return (
     <div className="App">
@@ -31,10 +33,15 @@ function App() {
 
     <ClickCounter/>
     <HoverCounter/>
-
+    <UserefCounter/>
 
     </div>
   );
 }
 
 export default App;
+
+// how is decrorator deifferenet from HOC
+// What are similar libray that can you use any other way 
+//LIFE CYCLE WALA VIDEO PURA REFER KR LO 
+// 

@@ -50,45 +50,60 @@ import React from 'react';
 
 function App() {
   return (
-    <div>
-    <Header/>
-      <h1>Hello World</h1>
-      <div style={{textDecorationColor:'blue'}}>Testing</div>
-      <Pizza/>
-      <Menu/>
-      <Footer/>
+    <div className='container'>
+      <Header />
+      <Menu />
+      <Footer />
     </div>
-    
+
   );
 }
 
-const Pizza=()=>{
-  return(
-    <div>
-      <h1>Pizza</h1>
-    </div>
-  ) 
+const Menu = () => {
+  return (
+    <main className="menu">
+      <h2>Menu</h2>
+      <Pizza name="Pizza Spinaci"  ingredients="Tomato , mozarella , spinach and ricotta cheese" photoName="./../pizzas/spinaci.jpg"/>
+    </main>
+  )
 }
 
-const Menu=()=>{
-  return(
+const Pizza = (props) => {
+  return (
     <div>
-      <h1>Menu</h1>
+      <img src={props.photoName}alt='pizza' />
+      <h3>{props.name}</h3>
+      <p>{props.ingredients} </p>
     </div>
   )
 }
 
-const Header=()=>{
-  return(
-    <div>
-    <img src='./../public/pizza.jpg' alt='pizza'/>
+
+
+const Header = () => {
+  return (
+    <header className='header'>
       <h1>Fast React Pizza Company</h1>
-    </div>
+    </header>
   )
 }
 
-const Footer=()=>{
-  return React.createElement('footer',null,"We are Currently Open");
+const Footer = () => {
+  const hour=new Date().getHours();
+
+  const openHour=12; 
+  const closeHour=22;
+  
+  if(hour<openHour || hour>=closeHour){
+    return <footer className='footer'>Sorry, we are closed</footer>
+  }
+  else{
+    return <footer className='footer'>We are open</footer>
+  }
+
+
+
+  
 }
 
 export default App;
