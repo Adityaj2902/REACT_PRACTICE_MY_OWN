@@ -110,17 +110,21 @@ const Footer = () => {
   return (
     <footer className='footer'>
       {isOpen ? (
-        <div className="order">
-          <p>
-            We are Open Until {closeHour}:00 PM Come Visit us or Order Us Online
-          </p>
-          <button className='btn'>Order Now</button>
-        </div>
+      <Order openHour={openHour} closeHour={closeHour}/>
       ) : (
         <p>Sorry, we are closed now. Please visit us between {openHour}:00 and {closeHour}:00.</p>
       )}
     </footer>
   );
+}
+
+function Order(props){
+  <div className="order">
+          <p>
+            We are Open Until {props.closeHour}:00 PM Come Visit us or Order Us Online
+          </p>
+          <button className='btn'>Order Now</button>
+        </div>
 }
 
 export default App;
