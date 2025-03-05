@@ -63,13 +63,14 @@ const Menu = () => {
     <main className="menu">
       <h2>Menu</h2>
       <div>
-      {pizzasNum >0  && (
-        <ul className='pizzas'>
+      {pizzasNum >0  ? (
+        <ul className='pizzas'>  
+        {/* we cant be able to use if else here because in jsx inside the curly braces we can only write something that a return a new value  */}
           {pizzaData.map((pizza) => {
             return <Pizza pizzaobj={pizza} key={pizza.name} />;
           })}
         </ul>
-      )}
+      ):<p> We Are Still Working on Our Menu . Please Come Back Later </p>}
        
       </div>
     </main>
