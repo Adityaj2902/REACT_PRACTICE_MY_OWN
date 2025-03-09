@@ -16,15 +16,15 @@ function App() {
 
 
   function handlePrevious(){
-    step > 1 ? setStep(step - 1) : alert("You are at the first step");    
+    step > 1 ? setStep((s)=>s - 1) : alert("You are at the first step");    
   }
   
   function handleNext(){
-    step >= 3 ? alert("You have no message further"):setStep(step+1);
+    step >= 3 ? alert("You have no message further"):setStep((s)=>s+1);
   }
   return (
     <div>
-    <button className="close" onClick={()=>setIsOpen(!isOpen)}>&times;</button>
+    <button className="close" onClick={()=>setIsOpen((s)=>!s)}>&times;</button>
     {isOpen && ( 
     <div className="steps">
       <div className="numbers">
