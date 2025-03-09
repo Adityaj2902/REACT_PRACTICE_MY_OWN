@@ -1,7 +1,8 @@
-import React from 'react'   
-import ChildB from './childB';
-
-function ChildA() {
+import React from 'react'
+import ChildB from './childB'
+ 
+ 
+ const ChildA =()=> {
     return (
         <div>
             <ChildB/>
@@ -9,4 +10,4 @@ function ChildA() {
     )
 }
 
-export default ChildA;
+export default ChildA

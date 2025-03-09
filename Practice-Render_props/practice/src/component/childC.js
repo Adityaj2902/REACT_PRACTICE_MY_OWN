@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react'
+import {useContext} from 'react'
+import { UserContext } from '../App';
 
-
-function ChildC() {
+const ChildC =()=> {
+    const user=useContext(UserContext);
     return (
         <div>
-            hello world;
+           {user.name}
         </div>
     )
 }
 
-export default ChildC;
+export default  ChildC;

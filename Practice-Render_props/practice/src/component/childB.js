@@ -1,6 +1,8 @@
-import React from 'react'
-import ChildC from './childC';
-function ChildB() {
+import react from 'react'
+import ChildC from './childC'
+
+
+const ChildB=()=> {
     return (
         <div>
             <ChildC/>
@@ -8,4 +10,4 @@ function ChildB() {
     )
 }
 
-export default ChildB;
+export default ChildB
