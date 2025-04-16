@@ -3,9 +3,9 @@ import { React, useReducer, useState } from "react";
 function reducer(state,action){
   console.log(state,action)
   if(action.type === 'inc')
-    return state+action.payload
+    return state+1;
   if(action.type ==='dec')
-    return state-action.payload
+    return state-1;
   if(action.type === "setCount" )
     return action.payload
 
@@ -22,19 +22,23 @@ function DateCounter() {
   date.setDate(date.getDate() + count);
 
   const dec = function () {
-    dispatch({type:'inc' , payload:-1})
     // setCount((count) => count - 1);
     // setCount((co unt) => count - step);
+    // dispatch({type:'inc' , payload:-1}) 
+    // we dont need to write payload here 
+       dispatch({type:'dec' }) 
+
   };
 
   const inc = function () {
-    dispatch({typo:'inc',payload:1})
     // setCount((count) => count + 1);
     // setCount((count) => count + step);
+    // dispatch({typo:'inc',payload:1})
+    dispatch({type:'inc'})
   };
 
   const defineCount = function (e) {
-    dispatch({type:"setCount",payload:Number(e.target.value)})
+    dispatch({type:"setCount" ,payload :Number(e.target.value)})
 
     // setCount(Number(e.target.value));
   };
