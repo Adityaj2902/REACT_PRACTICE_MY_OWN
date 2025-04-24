@@ -1,0 +1,38 @@
+/* Add styling for the day header and holiday display */
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+}
+
+.day-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.day-number {
+  font-size: 1.1rem;
+  margin: 2px 0;
+}
+
+.holiday-name {
+  font-size: 0.8rem;
+  color: #d32f2f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-style: italic;
+}
+
+.current-day {
+  background-color: rgba(3, 169, 244, 0.15);
+  border-radius: 4px;
+}
+
+.restricted-day {
+  background-color: rgba(244, 67, 54, 0.08);
+  border-radius: 4px;
+} 
